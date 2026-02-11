@@ -259,3 +259,11 @@ table {
     bottom: 32.5%;
   }
 }
+
+
+
+.slider-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
