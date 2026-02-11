@@ -1,0 +1,261 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background: #000000;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.img-1 {
+  width: 100%;
+}
+
+.c-1 {
+  position: relative;
+}
+
+.layout {
+  position: relative;
+}
+
+.sound {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.sound-toggle {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 10;
+  cursor: pointer;
+  width: 30px;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.nav-btn img {
+  width: 30px;
+}
+
+.next {
+  right: 5px;
+}
+.prev {
+  left: 5px;
+}
+
+.lamp {
+  left: 16%;
+  max-width: 80px;
+  position: absolute;
+  bottom: 32.5%;
+}
+
+.smoke {
+  position: absolute;
+  right: 12%;
+  max-width: 34px;
+  bottom: 36.2%;
+}
+
+.cvety-verh {
+  position: absolute;
+  top: 21%;
+  right: 20%;
+  max-width: 100px;
+}
+
+.interactive {
+  outline: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  -webkit-touch-callout: none;
+}
+
+.c-1-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 385px) {
+  .lamp {
+    left: 17%;
+    max-width: 70px;
+    position: absolute;
+    bottom: 32.5%;
+  }
+}

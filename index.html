@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="slider-section">
+        <div class="wrapper">
+          <div class="slider-container">
+            <div class="slides-track">
+              <div class="slide" data-bg-music="./images/slide-1.wav">
+                <div class="layout">
+                  <div class="c-1">
+                    <img class="c-1-img" src="./images/img-1.png" alt="">
+                    <img
+                      class="interactive cvety-verh"
+                      data-sfx="./images/grass-rustling.mp3"
+                      data-gif="./images/cvety-verh.gif"
+                      src="./images/cvety-verh.svg"
+                      data-duration="2000"
+                      alt=""
+                    />
+                    <img
+                      class="interactive lamp"
+                      data-sfx="./images/lamp-swith.mp3"
+                      src="./images/lamp.svg"
+                      data-duration="1500"
+                      data-gif="./images/lamp.gif"
+                      alt=""
+                    />
+                    <img
+                      class="interactive smoke"
+                      data-sfx="./sounds/smoke.mp3"
+                      src="./images/smoke.gif"
+                      data-gif="./images/smoke.gif"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Слайд 2 (для примера) -->
+              <div class="slide" data-bg-music="./sounds/bg-track-2.mp3">
+                <div class="layout">
+                  <div class="c-1">
+                    <img
+                      class="interactive"
+                      data-sfx="./sounds/other.mp3"
+                      src="./images/item-2.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Управление -->
+            <img
+              class="sound-toggle"
+              src="./images/Sound_On.svg"
+              data-on="./images/Sound_On.svg"
+              data-off="./images/Sound_Off.svg"
+              alt="Sound Control"
+            />
+
+            <button class="nav-btn prev">
+              <img src="./images/prev.svg" alt="" />
+            </button>
+            <button class="nav-btn next">
+              <img src="./images/next.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+      <div
+        id="start-overlay"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          z-index: 1000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        "
+      >
+        <div style="color: white; text-align: center">
+          <img
+            src="./images/Sound_On.svg"
+            style="width: 80px; margin-bottom: 20px"
+            alt=""
+          />
+          <p>Нажмите в любом месте, чтобы начать</p>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
