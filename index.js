@@ -11,13 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let bgMusic = new Audio();
   bgMusic.loop = false;
 
-  // 1. Сохраняем статичные пути
   document.querySelectorAll(".interactive").forEach(img => {
       img.dataset.static = img.src;
   });
 
   function updateSlider() {
-    // При смене слайда сбрасываем все интерактивные гифки в статику
+
     document.querySelectorAll(".interactive").forEach(img => {
         img.src = img.dataset.static;
     });
@@ -32,31 +31,31 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isMuted) bgMusic.play().catch(() => {});
   }
 
-  // --- ЛОГИКА КЛИКА ПО ПРЕДМЕТАМ ---
+
   document.querySelectorAll(".interactive").forEach((item) => {
-    // Флаг, чтобы нельзя было спамить кликами пока гифка играет
+
     let isPlaying = false;
 
     item.addEventListener("click", (e) => {
       e.stopPropagation();
-      if (isPlaying) return; // Если уже играет — ничего не делаем
+      if (isPlaying) return; 
 
       const gifSrc = item.getAttribute("data-gif");
       const duration = parseInt(item.getAttribute("data-duration")) || 2000;
 
       if (gifSrc) {
         isPlaying = true;
-        // Запускаем гифку
+
         item.src = gifSrc + "?t=" + Date.now();
 
-        // Через указанное время возвращаем статику
+
         setTimeout(() => {
           item.src = item.dataset.static;
           isPlaying = false;
         }, duration);
       }
 
-      // Звук
+
       if (!isMuted) {
         const sfx = new Audio(item.getAttribute("data-sfx"));
         sfx.volume = 0.8;
@@ -65,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Остальная логика без изменений (Overlay, Sound, Nav)
   startOverlay.addEventListener("click", () => {
     startOverlay.style.display = "none";
     updateSlider();
