@@ -267,3 +267,8 @@ table {
   display: flex;
   align-items: center;
 }
+
+
+.interactive {
+  width: 100%;
+}
